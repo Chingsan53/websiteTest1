@@ -1,0 +1,47 @@
+---
+layout: base
+title: ART
+---
+<header>
+
+    <h1>{{ title }} </h1>
+
+</header>
+
+<hr style="height:30px">
+
+<main>
+
+
+    <ul>
+        <div>
+        {% for photo in photos.otnofqv.media %}
+
+        <a href="{{photo.link}}"><img src ="{{photo.src.small}}"
+             alt="art"
+             style="height:150px; width:150px; border:10px solid {{photo.avg_color}}"
+             title="{{photo.alt}}"
+        ></a>
+
+        {% endfor %}
+
+        </div>
+     </ul>
+
+
+</main>
+
+<hr style="height:30px">
+
+<footer>
+    <a href="../about/index.html">About Us</a>
+    <br>
+    <a href="../index.html"><img src="home.jpg" alt="home">home</a>
+
+
+    <p>
+        <small>
+            <a href="https://www.pexels.com">Photos provided by Pexels</a>
+        </small>
+    </p>
+</footer>

@@ -1,0 +1,58 @@
+---
+layout: base 
+pagination:
+    data: photos.otnofqv.media
+    size: 1
+---
+
+<header>
+
+    {% for item in pagination.items %}
+        <h1>{{ item.alt }} </h1>
+        <a href="index.html"><img src="Home.JPG" alt=""></a>
+    {% endfor %}
+
+   
+</header>
+
+<hr style="height:30px">
+
+<main>
+
+    <ul>
+        {% for item in pagination.items %}
+        
+        <img src ="{{item.src.large2x}}" 
+             alt="art" 
+             style="height:1350px; width:1150px;border:20px solid {{item.avg_color}}"
+             title="{{item.alt}}"
+        >
+
+        {% endfor %}
+    </ul>
+
+</main>
+
+<hr style="height:30px">
+
+<footer>
+
+    <a href="index.html"><img src="Home.JPG" alt=""></a>
+    
+    {% for item in pagination.items %}
+
+    <ul>
+        <li><h2> Photographer Name: {{item.photographer}}</h2></li>
+        <li><h4> Photographer ID: {{item.id}}</h4></li>
+        <li><h4> Photo ID: {{item.photographer_id}}</h4></li>
+        <li><h4> Photographer URL: {{item.photographer_url}}</h4></li>
+    </ul>
+
+    {% endfor %}
+
+    <a href="/"><img src="/Home.jpg" alt="home">Home</a>
+    <p>
+            <h4><a href="https://www.pexels.com">Photos provided by Pexels</a></h4>      
+    </p>
+
+</footer>
