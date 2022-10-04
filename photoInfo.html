@@ -1,5 +1,5 @@
 ---
-layout: base 
+layout: base
 pagination:
     data: photos.otnofqv.media
     size: 1
@@ -9,10 +9,10 @@ pagination:
 
     {% for item in pagination.items %}
         <h1>{{ item.alt }} </h1>
-        <a href="index.html"><img src="Home.JPG" alt=""></a>
+        <a href="index.html"><img src="home.jpg" alt=""></a>
     {% endfor %}
 
-   
+
 </header>
 
 <hr style="height:30px">
@@ -21,9 +21,9 @@ pagination:
 
     <ul>
         {% for item in pagination.items %}
-        
-        <img src ="{{item.src.large2x}}" 
-             alt="art" 
+
+        <img src ="{{item.src.large2x}}"
+             alt="art"
              style="height:1350px; width:1150px;border:20px solid {{item.avg_color}}"
              title="{{item.alt}}"
         >
@@ -38,7 +38,7 @@ pagination:
 <footer>
 
     <a href="index.html"><img src="Home.JPG" alt=""></a>
-    
+
     {% for item in pagination.items %}
 
     <ul>
@@ -52,7 +52,7 @@ pagination:
 
     <a href="/"><img src="/Home.jpg" alt="home">Home</a>
     <p>
-            <h4><a href="https://www.pexels.com">Photos provided by Pexels</a></h4>      
+            <h4><a href="https://www.pexels.com">Photos provided by Pexels</a></h4>
     </p>
 
 </footer>
