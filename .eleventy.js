@@ -1,9 +1,7 @@
-module.exports = function(eleventyConfig) {
-    return {
-        dir: {
-            input: "_data",
-            output: "docs",
-        },
-        templateFormats : ["njk", "md", "html"]
-    };
+module.exports = function (eleventyConfig) {
+  eleventyConfig.setUseGitIgnore(false)
+  eleventyConfig.setBrowserSyncConfig({
+    notify: true,
+    open: true
+  })
 }
